@@ -189,14 +189,14 @@ function ServiceCard({ service, isExpanded, isCompressed = false }: ServiceCardP
           {service.ctaVariant === "outline" ? (
             <Button 
               variant="outline" 
-              className="w-full border-formidable-dark text-formidable-dark hover:bg-formidable-dark/10"
+              className="w-full border-formidable-dark text-formidable-gold hover:bg-formidable-dark/10 transition-all duration-300 hover:scale-105"
               asChild
             >
               <a href="#contacto">{service.ctaText}</a>
             </Button>
           ) : (
             <Button 
-              className="w-full bg-formidable-dark text-formidable-gold hover:bg-formidable-dark/90"
+              className="w-full bg-formidable-dark text-formidable-gold hover:bg-formidable-dark/90 transition-all duration-300 hover:scale-105"
               asChild
             >
               <a href="#contacto">{service.ctaText}</a>

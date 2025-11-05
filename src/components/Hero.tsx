@@ -28,7 +28,7 @@ export function Hero() {
           
           <Button 
             variant="outline" 
-            className="border-formidable-gold text-formidable-gold hover:bg-formidable-gold/10 transition-all duration-300"
+            className="border-formidable-gold text-formidable-gold hover:bg-formidable-gold/10 transition-all duration-300 hover:scale-105"
             style={{ fontSize: '18px', padding: '24px 32px' }}
             onClick={scrollToServices}
           >
