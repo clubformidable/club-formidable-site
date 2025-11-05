@@ -67,13 +67,13 @@ export function Services() {
   ];
 
   return (
-    <section id="servicios" className="pt-12 pb-24 px-6 md:px-24 bg-formidable-olive-light relative">
+    <section id="servicios" className="pt-12 pb-24 px-6 md:px-24 bg-formidable-gold relative">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-formidable-gold mb-4" style={{ fontSize: '48px' }}>
+          <h2 className="text-formidable-dark mb-4 text-[36px] md:text-[56px]" style={{ lineHeight: '1.1' }}>
             Elige tu nivel de transformación
           </h2>
-          <p className="text-formidable-gold opacity-70" style={{ fontSize: '18px' }}>
+          <p className="text-formidable-dark opacity-70" style={{ fontSize: '18px' }}>
             Cada camino está diseñado para llevarte más allá de donde estás ahora
           </p>
         </div>
@@ -139,7 +139,8 @@ function ServiceCard({ service, isExpanded, isCompressed = false }: ServiceCardP
     <div 
       className={`
         h-full rounded-lg border transition-all duration-500
-        ${service.featured ? 'border-formidable-red shadow-2xl shadow-formidable-red/30 glassmorphism' : 'border-formidable-gold/30 glassmorphism'}
+        ${service.featured ? 'border-formidable-red shadow-2xl shadow-formidable-red/30' : 'border-formidable-dark/30'}
+        bg-white/90 backdrop-blur-sm
         overflow-hidden flex flex-col
       `}
     >
@@ -148,39 +149,39 @@ function ServiceCard({ service, isExpanded, isCompressed = false }: ServiceCardP
           {service.badge}
         </Badge>
         
-        <h3 className="text-formidable-gold mb-3" style={{ fontSize: isCompressed ? '22px' : '28px', transition: 'font-size 0.5s' }}>
+        <h3 className="text-formidable-dark mb-3" style={{ fontSize: isCompressed ? '22px' : '28px', transition: 'font-size 0.5s' }}>
           {service.title}
         </h3>
         
         <p 
-          className={`text-formidable-gold opacity-80 mb-6 transition-all duration-500 ${isCompressed ? 'opacity-0 h-0 overflow-hidden' : 'opacity-80'}`}
+          className={`text-formidable-dark opacity-80 mb-6 transition-all duration-500 ${isCompressed ? 'opacity-0 h-0 overflow-hidden' : 'opacity-80'}`}
         >
           {service.description}
         </p>
 
         <div className={`flex-grow space-y-6 transition-all duration-500 ${isCompressed ? 'opacity-0 h-0 overflow-hidden' : 'opacity-100'}`}>
           <div className="space-y-3">
-            <p className="text-formidable-gold opacity-70">Incluye:</p>
+            <p className="text-formidable-dark opacity-70">Incluye:</p>
             <ul className="space-y-2">
               {service.includes.map((item, i) => (
                 <li key={i} className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-formidable-gold flex-shrink-0 mt-0.5" />
-                  <span className="text-formidable-gold opacity-90">{item}</span>
+                  <Check className="w-5 h-5 text-formidable-dark flex-shrink-0 mt-0.5" />
+                  <span className="text-formidable-dark opacity-90">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
 
           <div>
-            <p className="text-formidable-gold opacity-70 mb-2">Para quién:</p>
-            <p className="text-formidable-gold opacity-90">
+            <p className="text-formidable-dark opacity-70 mb-2">Para quién:</p>
+            <p className="text-formidable-dark opacity-90">
               {service.forWho}
             </p>
           </div>
 
           <div>
-            <p className="text-formidable-gold opacity-70">Precio:</p>
-            <p className="text-formidable-gold" style={{ fontSize: '32px' }}>{service.price}</p>
+            <p className="text-formidable-dark opacity-70">Precio:</p>
+            <p className="text-formidable-dark" style={{ fontSize: '32px' }}>{service.price}</p>
           </div>
         </div>
 
@@ -188,14 +189,14 @@ function ServiceCard({ service, isExpanded, isCompressed = false }: ServiceCardP
           {service.ctaVariant === "outline" ? (
             <Button 
               variant="outline" 
-              className="w-full border-formidable-gold text-formidable-gold hover:bg-formidable-gold/10"
+              className="w-full border-formidable-dark text-formidable-dark hover:bg-formidable-dark/10"
               asChild
             >
               <a href="#contacto">{service.ctaText}</a>
             </Button>
           ) : (
             <Button 
-              className="w-full bg-formidable-gold text-formidable-dark hover:bg-formidable-gold/90"
+              className="w-full bg-formidable-dark text-formidable-gold hover:bg-formidable-dark/90"
               asChild
             >
               <a href="#contacto">{service.ctaText}</a>

@@ -41,7 +41,7 @@ export function Testimonials() {
       <div className="relative z-10">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-formidable-gold mb-4" style={{ fontSize: '48px' }}>
+          <h2 className="text-formidable-gold mb-4 text-[36px] md:text-[56px]" style={{ lineHeight: '1.1' }}>
             Transformaciones reales, personas reales
           </h2>
           <p className="text-formidable-gold opacity-70" style={{ fontSize: '18px' }}>
@@ -66,23 +66,6 @@ export function Testimonials() {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* Closing block */}
-        <div className="glassmorphism p-12 rounded-lg space-y-6 border-2 border-formidable-gold/30">
-          <p className="text-formidable-gold opacity-90 text-center max-w-4xl mx-auto" style={{ fontSize: '19px', lineHeight: '1.8' }}>
-            Todos ellos tenían algo en común: yo confié en ellos más que ellos mismos. A partir de conversaciones profundas, 
-            descubrieron el potencial que siempre estuvo ahí. Construyeron un puente nuevo. Y abandonaron el camino que los 
-            llevaba a un destino predecible.
-          </p>
-          
-          <p className="text-formidable-gold text-center" style={{ fontSize: '24px' }}>
-            Porque sin un entrenador certificado, tu destino está marcado por tus puntos ciegos.
-          </p>
-          
-          <p className="text-formidable-gold opacity-90 text-center" style={{ fontSize: '19px' }}>
-            No necesitas más consejos sobre tu vida. Necesitas alguien entrenado y certificado para hacerte crecer.
-          </p>
         </div>
       </div>
       </div>

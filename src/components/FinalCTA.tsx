@@ -4,7 +4,7 @@ export function FinalCTA() {
   return (
     <section id="contacto" className="py-24 px-6 md:px-24 bg-formidable-olive">
       <div className="max-w-4xl mx-auto text-center space-y-10">
-        <h2 className="text-formidable-gold" style={{ fontSize: '56px' }}>
+        <h2 className="text-formidable-gold text-[36px] md:text-[56px]" style={{ lineHeight: '1.1' }}>
           ¿Qué necesitas?
         </h2>
         
@@ -13,11 +13,12 @@ export function FinalCTA() {
         </p>
         
         <Button 
-          className="bg-formidable-gold text-formidable-dark hover:bg-formidable-gold/90 transition-all duration-300 hover:scale-105"
-          style={{ fontSize: '20px', padding: '28px 48px' }}
+          className="bg-formidable-gold text-formidable-dark hover:bg-formidable-gold/90 transition-all duration-300 hover:scale-105 px-6 py-6 md:px-12 md:py-7 text-[16px] md:text-[20px] w-full md:w-auto"
           asChild
         >
-          <a href="mailto:contacto@clubformidable.com">Agenda tu primera conversación</a>
+          <a href="mailto:contacto@clubformidable.com" className="whitespace-normal md:whitespace-nowrap">
+            Agenda tu primera conversación
+          </a>
         </Button>
         
         <p className="text-formidable-gold opacity-60" style={{ fontSize: '14px' }}>

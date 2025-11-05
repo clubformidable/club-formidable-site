@@ -1,7 +1,12 @@
-import { Target, Wifi, Sparkles, TrendingUp, Users } from "lucide-react";
+"use client";
+
+import { Target, Wifi, Sparkles, TrendingUp, Users, ChevronDown } from "lucide-react";
 import coachImage from "figma:asset/92208e15259db93863f9a944977cfa36c8ca580a.png";
+import { useState } from "react";
 
 export function HowIWork() {
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
   const blocks = [
     {
       icon: TrendingUp,
@@ -30,13 +35,17 @@ export function HowIWork() {
     }
   ];
 
+  const toggleBlock = (index: number) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
+
   return (
     <section className="py-24 px-6 md:px-24 bg-formidable-dark relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-formidable-olive/5 to-transparent pointer-events-none"></div>
       <div className="relative z-10">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-formidable-gold mb-4" style={{ fontSize: '48px' }}>
+          <h2 className="text-formidable-gold mb-4 text-[36px] md:text-[56px]" style={{ lineHeight: '1.1' }}>
             Cómo es trabajar conmigo
           </h2>
           <p className="text-formidable-gold opacity-70" style={{ fontSize: '18px' }}>
@@ -50,22 +59,38 @@ export function HowIWork() {
           <div className="space-y-6">
             {blocks.map((block, index) => {
               const Icon = block.icon;
+              const isExpanded = expandedIndex === index;
+              
               return (
                 <div 
                   key={index} 
                   className="group relative p-6 rounded-lg glassmorphism hover:border-formidable-gold/30 transition-all duration-500 overflow-hidden cursor-pointer"
+                  onClick={() => toggleBlock(index)}
                 >
-                  <div className="flex gap-4 items-center">
-                    <div className="flex-shrink-0">
-                      <div className="w-12 h-12 rounded-full bg-formidable-gold/10 flex items-center justify-center">
-                        <Icon className="w-6 h-6 text-formidable-gold" />
+                  <div className="flex gap-4 items-center justify-between">
+                    <div className="flex gap-4 items-center flex-1">
+                      <div className="flex-shrink-0">
+                        <div className="w-12 h-12 rounded-full bg-formidable-gold/10 flex items-center justify-center">
+                          <Icon className="w-6 h-6 text-formidable-gold" />
+                        </div>
                       </div>
+                      <h3 className="text-formidable-gold" style={{ fontSize: '24px' }}>
+                        {block.title}
+                      </h3>
                     </div>
-                    <h3 className="text-formidable-gold" style={{ fontSize: '24px' }}>
-                      {block.title}
-                    </h3>
+                    <ChevronDown 
+                      className={`w-6 h-6 text-formidable-gold flex-shrink-0 transition-transform duration-500 ${
+                        isExpanded ? 'rotate-180' : ''
+                      } md:opacity-50 md:group-hover:opacity-100`}
+                    />
                   </div>
-                  <div className="max-h-0 opacity-0 group-hover:max-h-96 group-hover:opacity-100 transition-all duration-500 overflow-hidden">
+                  <div 
+                    className={`transition-all duration-500 overflow-hidden ${
+                      isExpanded 
+                        ? 'max-h-96 opacity-100' 
+                        : 'max-h-0 opacity-0 md:group-hover:max-h-96 md:group-hover:opacity-100'
+                    }`}
+                  >
                     <p className="text-formidable-gold opacity-85 mt-4 pl-16" style={{ fontSize: '16px', lineHeight: '1.7' }}>
                       {block.copy}
                     </p>
