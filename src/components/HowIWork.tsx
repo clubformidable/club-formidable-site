@@ -1,7 +1,7 @@
 "use client";
-
+// @ts-ignore: figma asset imports have no type declarations in this project
 import { Target, Wifi, Sparkles, TrendingUp, Users, ChevronDown } from "lucide-react";
-import coachImage from "figma:asset/92208e15259db93863f9a944977cfa36c8ca580a.png";
+const coachImage = new URL("../assets/92208e15259db93863f9a944977cfa36c8ca580a.png", import.meta.url).href;
 import { useState } from "react";
 import { motion } from "motion/react";
 
