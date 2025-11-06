@@ -28,7 +28,7 @@ export function FinalCTA() {
           className="bg-formidable-gold text-formidable-dark hover:bg-formidable-gold/90 transition-all duration-300 hover:scale-105 px-6 py-6 md:px-12 md:py-7 text-[16px] md:text-[20px] w-full md:w-auto shadow-xl hover:shadow-2xl"
           asChild
         >
-          <a href="mailto:contacto@clubformidable.com" className="whitespace-normal md:whitespace-nowrap">
+          <a href="https://cal.com/mario-acevedo-aguilar-biepq1/30min" target="_blank" rel="noopener noreferrer" className="whitespace-normal md:whitespace-nowrap">
             Agenda tu primera conversación
           </a>
         </Button>

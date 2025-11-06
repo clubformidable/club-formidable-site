@@ -45,7 +45,7 @@ export function AboutMe() {
               whileHover={{ scale: 1.02 }}
             >
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1609503842755-77f4a81d69ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBjb2FjaCUyMG1lbnRvcnxlbnwxfHx8fDE3NjI0Mzc1MDR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src="./src/assets/1120830129asdhfasdf123089.jpg"
                 alt="Mario Acevedo - Coach profesional"
                 className="w-full rounded-lg shadow-2xl transition-all duration-500"
               />
@@ -59,32 +59,29 @@ export function AboutMe() {
 
             <motion.div
               className="text-formidable-gold"
-              style={{ fontSize: '20px', lineHeight: '1.6' }}
+              style={{ fontSize: '15px', lineHeight: '1.6' }}
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
               <p className="mb-4">
-                Soy <strong>Mario Acevedo</strong>. Ingeniero electrónico, VP de Producto, padre, esposo y coach certificado.
+                Soy <strong>Mario Acevedo</strong>. Ingeniero, coach, experto en productos digitales, padre, marido y creyente.
               </p>
               <p className="mb-4">
-                Durante años construí productos digitales que escalaron a millones de usuarios. Lideré equipos remotos en 3 zonas horarias. Llevé un producto de 0 a $1.3M ARR en 2 años. Hice todo lo que se supone que hace un "líder exitoso".
+                Durante años he estado construyendo productos digitales que escalan. He liderado equipos remotos en 3 zonas horarias. Hice todo lo que se supone que hace un "líder exitoso".
               </p>
               <p className="mb-4">
-                Pero no era suficiente. Algo de mi esencia faltaba.
+                Pero no era suficiente. <strong>Algo de mi esencia faltaba</strong>.
               </p>
               <p className="mb-4">
-                Veía equipos brillantes atrapados en su propia mediocridad. Personas con talento increíble que no lo veían o tenían dificultades para balancear con su familia. Organizaciones que pedían resultados pero no invertían en las personas que los generaban.
+                He visto personas y equipos brillantes atrapados en su propia mediocridad. Incapaz de auto-desbloquearse, de balancear su vida familiar y profesional. Sabiendo que hay algo más en ellos, pero sin saber cómo reclamarlo como suyo.
               </p>
               <p className="mb-4">
-                Entonces me di cuenta: <strong>la tecnología escala, pero las personas transforman.</strong>
+                Entonces me di cuenta: <strong>un gran producto impacta a miles. Una persona transformada impacta a generaciones. </strong>
               </p>
               <p className="mb-4">
-                Estudié psicología. Me certifiqué como coach (ICF). Lideré procesos de transformación cultural en multinacionales. Y descubrí mi verdadera vocación: ayudar a personas y equipos a ver el potencial que sus puntos ciegos no les permiten ver.
-              </p>
-              <p className="mb-4">
-                Hoy combino mis dos mundos: la mentalidad de producto (orientada a resultados, basada en datos, obsesionada con el usuario) con el coaching certificado (profundo, empático, transformacional).
+                Estudié psicología. Me certifiqué como coach (ICF). Hoy combino mis dos mundos: la mentalidad de producto (orientada a resultados, basada en datos, obsesionada con el usuario) con el coaching certificado (profundo, empático, transformacional).
               </p>
               <p>
                 <strong>El resultado: coaching que no endulza la realidad, pero que confía en que puedes manejarla.</strong>
@@ -176,12 +173,12 @@ export function AboutMe() {
               {
                 number: "15+ años",
                 description: "Liderando equipos y productos en startups y empresas internacionales",
-                featured: false
+                featured: true
               },
               {
                 number: "$1.3M ARR",
                 description: "Generados en 2 años con producto 0→1 en fintech con IA",
-                featured: true
+                featured: false
               },
               {
                 number: "100K+ usuarios",
@@ -303,12 +300,12 @@ export function AboutMe() {
                   {
                     title: "VP de Producto en Fintech con IA",
                     description: "Escalado de 0 a $1.3M ARR en 2 años. Liderazgo de equipo remoto 15+ personas en 3 zonas horarias. Producto tech con impacto real.",
-                    highlight: true
+                    highlight: false
                   },
                   {
                     title: "Coach de Transformación Cultural",
                     description: "Programas de cambio en organizaciones multinacionales. Inteligencia emocional, gestión de conflictos, adaptación al cambio.",
-                    highlight: false
+                    highlight: true
                   },
                   {
                     title: "Chief Product Officer",
@@ -384,7 +381,7 @@ export function AboutMe() {
               whileHover={{ scale: 1.02 }}
             >
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1644027621533-633fe3de243a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY3ViYSUyMGRpdmluZyUyMHVuZGVyd2F0ZXJ8ZW58MXx8fHwxNzYyMzQ3NDg2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src="./src/assets/1310897adsfad78140asdf.png"
                 alt="Mario Acevedo - Pasión por el buceo"
                 className="w-full rounded-lg shadow-2xl transition-all duration-500"
               />
@@ -406,12 +403,6 @@ export function AboutMe() {
           <Badge className="bg-formidable-red text-white mb-8">
             La transformación empieza aquí
           </Badge>
-          <p className="text-formidable-gold mb-6" style={{ fontSize: '24px', lineHeight: '1.6' }}>
-            <strong>He construido productos que escalaron a cientos de miles de usuarios.</strong>
-          </p>
-          <p className="text-formidable-gold mb-6" style={{ fontSize: '24px', lineHeight: '1.6' }}>
-            <strong>Pero mi mejor trabajo es ayudar a personas a escalar su propia vida.</strong>
-          </p>
           <p className="text-formidable-gold mb-8" style={{ fontSize: '20px', lineHeight: '1.6' }}>
             Si has llegado hasta aquí, probablemente veas algo en ti que todavía no te atreves a reclamar.
           </p>

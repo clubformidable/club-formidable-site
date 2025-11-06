@@ -10,9 +10,6 @@ export function Footer() {
             <h3 className="text-formidable-gold" style={{ fontSize: '24px' }}>
               Club Formidable
             </h3>
-            <Badge className="bg-formidable-red text-white text-xs">
-              ICF
-            </Badge>
           </div>
           
           <nav className="flex flex-wrap gap-6 justify-center">
@@ -38,7 +35,7 @@ export function Footer() {
           
           <div className="flex gap-4">
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/marioacevedoaguilar/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-formidable-gold opacity-70 hover:opacity-100 transition-all duration-300 hover:scale-110"

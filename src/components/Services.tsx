@@ -43,7 +43,7 @@ export function Services() {
       ],
       forWho: "Líderes y profesionales comprometidos con su crecimiento que necesitan alguien que vea lo que ellos no pueden ver.",
       price: "desde 5€ al mes",
-      ctaText: "Agenda tu primera sesión",
+      ctaText: "Únete a Pro",
       ctaDestination: "https://clubformidable.substack.com/subscribe",
       ctaVariant: "default" as const,
       
@@ -198,14 +198,14 @@ function ServiceCard({ service, isExpanded, isCompressed = false }: ServiceCardP
               className="w-full border-formidable-dark text-formidable-gold hover:bg-formidable-dark/10 transition-all duration-300 hover:scale-105"
               asChild
             >
-              <a href={service.ctaDestination}>{service.ctaText}</a>
+              <a href={service.ctaDestination} target="_blank" rel="noopener noreferrer">{service.ctaText}</a>
             </Button>
           ) : (
             <Button 
               className="w-full bg-formidable-dark text-formidable-gold hover:bg-formidable-dark/90 transition-all duration-300 hover:scale-105"
               asChild
             >
-              <a href={service.ctaDestination}>{service.ctaText}</a>
+              <a href={service.ctaDestination} target="_blank" rel="noopener noreferrer">{service.ctaText}</a>
             </Button>
           )}
         </div>
