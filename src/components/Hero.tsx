@@ -9,12 +9,11 @@ export function Hero() {
     <section className="min-h-screen flex items-center justify-center px-6 md:px-24 pt-28 pb-12 bg-formidable-dark-hero relative">
       <div className="max-w-5xl mx-auto text-center space-y-8">
         <h1 className="text-formidable-gold opacity-100 text-[36px] md:text-[56px]" style={{ lineHeight: '1.1' }}>
-          Formidable no es lo que haces. Es lo que eres cuando dejas de limitarte
+          Formidable, lo eres cuando dejas de limitarte
         </h1>
         
         <p className="text-formidable-gold opacity-85 max-w-3xl mx-auto text-[18px] md:text-[22px]" style={{ lineHeight: '1.6' }}>
-          Coaching transformacional para profesionales y equipos que están cansados de su versión promedio. 
-          Trabajo remoto. Compromiso real. Resultados que permanecen.
+          Soy Mario y lidero una comunidad de padres formidables, que cada semana se esfuerzan por construir hogares sólidos, invertir en sus hijos y aún tienen fuerza para crear culturas positivas en el trabajo. 🌍✨
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">

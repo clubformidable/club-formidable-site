@@ -24,6 +24,7 @@ export function Services() {
       price: "Gratis",
       ctaText: "Únete gratis",
       ctaVariant: "outline" as const,
+      ctaDestination: "https://clubformidable.substack.com/subscribe",
       featured: false
     },
     {
@@ -33,16 +34,19 @@ export function Services() {
       description: "Contenido premium + acompañamiento directo. Porque leer no es suficiente cuando necesitas transformación real.",
       includes: [
         'Todo lo de Free, más...',
-        'Sesiones 1:1 de coaching certificado (mensuales)',
+        'Sesión mensual de coaching',
+        '17% descuento en procesos de coaching 1:1',
         'Planes de acción personalizados',
         'Seguimiento y accountability',
         'Acceso prioritario a recursos exclusivos',
         'Comunidad privada Pro'
       ],
       forWho: "Líderes y profesionales comprometidos con su crecimiento que necesitan alguien que vea lo que ellos no pueden ver.",
-      price: "Consultar",
+      price: "desde 5€ al mes",
       ctaText: "Agenda tu primera sesión",
+      ctaDestination: "https://clubformidable.substack.com/subscribe",
       ctaVariant: "default" as const,
+      
       featured: true
     },
     {
@@ -62,6 +66,7 @@ export function Services() {
       price: "Personalizado",
       ctaText: "Hablemos de tu equipo",
       ctaVariant: "outline" as const,
+      ctaDestination: "https://cal.com/mario-acevedo-aguilar-biepq1/30min",
       featured: false
     }
   ];
@@ -128,6 +133,7 @@ interface ServiceCardProps {
     price: string;
     ctaText: string;
     ctaVariant: "default" | "outline";
+    ctaDestination: string;
     featured: boolean;
   };
   isExpanded: boolean;
@@ -192,14 +198,14 @@ function ServiceCard({ service, isExpanded, isCompressed = false }: ServiceCardP
               className="w-full border-formidable-dark text-formidable-gold hover:bg-formidable-dark/10 transition-all duration-300 hover:scale-105"
               asChild
             >
-              <a href="#contacto">{service.ctaText}</a>
+              <a href={service.ctaDestination}>{service.ctaText}</a>
             </Button>
           ) : (
             <Button 
               className="w-full bg-formidable-dark text-formidable-gold hover:bg-formidable-dark/90 transition-all duration-300 hover:scale-105"
               asChild
             >
-              <a href="#contacto">{service.ctaText}</a>
+              <a href={service.ctaDestination}>{service.ctaText}</a>
             </Button>
           )}
         </div>

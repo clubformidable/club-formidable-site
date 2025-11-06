@@ -1,5 +1,6 @@
 import { Card, CardContent } from "./ui/card";
 import { Badge } from "./ui/badge";
+import { motion } from "motion/react";
 
 export function Testimonials() {
   const testimonials = [
@@ -40,31 +41,45 @@ export function Testimonials() {
       <div className="absolute inset-0 bg-formidable-dark/60"></div>
       <div className="relative z-10">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="text-formidable-gold mb-4 text-[36px] md:text-[56px]" style={{ lineHeight: '1.1' }}>
             Transformaciones reales, personas reales
           </h2>
           <p className="text-formidable-gold opacity-70" style={{ fontSize: '18px' }}>
             Lo que cambia no es solo el resultado. Es la forma en que se ven a sí mismos.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="glassmorphism border-formidable-gold/30 hover:border-formidable-gold/50 transition-all duration-300">
-              <CardContent className="p-8 space-y-4">
-                <Badge className="bg-formidable-red text-white hover:bg-formidable-red/90">
-                  {testimonial.miniTitle}
-                </Badge>
-                <p className="text-formidable-gold opacity-90" style={{ fontSize: '17px', lineHeight: '1.7' }}>
-                  {testimonial.copy}
-                </p>
-                <div className="pt-4 border-t border-formidable-gold/20">
-                  <p className="text-formidable-gold">{testimonial.name}</p>
-                  <p className="text-formidable-gold opacity-60">{testimonial.title}</p>
-                </div>
-              </CardContent>
-            </Card>
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+            >
+              <Card className="glassmorphism border-formidable-gold/30 hover:border-formidable-gold/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-formidable-gold/20 h-full">
+                <CardContent className="p-8 space-y-4">
+                  <Badge className="bg-formidable-red text-white hover:bg-formidable-red/90 shadow-lg">
+                    {testimonial.miniTitle}
+                  </Badge>
+                  <p className="text-formidable-gold opacity-90" style={{ fontSize: '17px', lineHeight: '1.7' }}>
+                    {testimonial.copy}
+                  </p>
+                  <div className="pt-4 border-t border-formidable-gold/20">
+                    <p className="text-formidable-gold">{testimonial.name}</p>
+                    <p className="text-formidable-gold opacity-60">{testimonial.title}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
         </div>
       </div>

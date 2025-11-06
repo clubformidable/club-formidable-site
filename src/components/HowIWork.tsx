@@ -49,14 +49,20 @@ export function HowIWork({ onNavigateToAbout }: HowIWorkProps) {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-formidable-olive/5 to-transparent pointer-events-none"></div>
       <div className="relative z-10">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="text-formidable-gold mb-4 text-[36px] md:text-[56px]" style={{ lineHeight: '1.1' }}>
             Cómo es trabajar conmigo
           </h2>
           <p className="text-formidable-gold opacity-70" style={{ fontSize: '18px' }}>
             Esto no es para todos. Y está bien.
           </p>
-        </div>
+        </motion.div>
 
         {/* Two column layout: Text blocks + Image */}
         <div className="grid md:grid-cols-2 gap-12 items-start mb-12">
@@ -67,10 +73,14 @@ export function HowIWork({ onNavigateToAbout }: HowIWorkProps) {
               const isExpanded = expandedIndex === index;
               
               return (
-                <div 
+                <motion.div 
                   key={index} 
-                  className="group relative p-6 rounded-lg glassmorphism hover:border-formidable-gold/30 transition-all duration-500 overflow-hidden cursor-pointer"
+                  className="group relative p-6 rounded-lg glassmorphism hover:border-formidable-gold/30 transition-all duration-500 overflow-hidden cursor-pointer hover:scale-105 hover:shadow-2xl hover:shadow-formidable-gold/20"
                   onClick={() => toggleBlock(index)}
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
                   <div className="flex gap-4 items-center justify-between">
                     <div className="flex gap-4 items-center flex-1">
@@ -100,7 +110,7 @@ export function HowIWork({ onNavigateToAbout }: HowIWorkProps) {
                       {block.copy}
                     </p>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>
