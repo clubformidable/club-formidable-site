@@ -3,8 +3,13 @@
 import { Target, Wifi, Sparkles, TrendingUp, Users, ChevronDown } from "lucide-react";
 import coachImage from "figma:asset/92208e15259db93863f9a944977cfa36c8ca580a.png";
 import { useState } from "react";
+import { motion } from "motion/react";
 
-export function HowIWork() {
+interface HowIWorkProps {
+  onNavigateToAbout?: () => void;
+}
+
+export function HowIWork({ onNavigateToAbout }: HowIWorkProps) {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const blocks = [
@@ -102,14 +107,49 @@ export function HowIWork() {
 
           {/* Image column */}
           <div className="sticky top-32">
-            <div className="relative">
+            <motion.div 
+              className="relative cursor-pointer group"
+              onClick={onNavigateToAbout}
+              initial={{ y: 0 }}
+              animate={{ 
+                y: [0, -10, 0],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              whileHover={{ scale: 1.02 }}
+            >
               <img 
                 src={coachImage} 
                 alt="Coach speaking" 
                 className="w-full rounded-lg shadow-2xl"
               />
               <div className="absolute inset-0 rounded-lg ring-1 ring-formidable-gold/20"></div>
-            </div>
+              
+              {/* Destello con texto "¿Quién soy?" */}
+              <motion.div
+                className="absolute inset-0 flex items-center justify-center pointer-events-none"
+                initial={{ opacity: 0 }}
+                animate={{ 
+                  opacity: [0, 1, 1, 0],
+                }}
+                transition={{
+                  duration: 4,
+                  times: [0, 0.2, 0.7, 1],
+                  repeat: Infinity,
+                  repeatDelay: 8,
+                  ease: "easeInOut"
+                }}
+              >
+                <div className="bg-formidable-gold/95 backdrop-blur-sm px-8 py-4 rounded-lg shadow-2xl">
+                  <p className="text-formidable-olive" style={{ fontSize: '24px' }}>
+                    ¿Quién soy?
+                  </p>
+                </div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
 
