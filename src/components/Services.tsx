@@ -41,7 +41,7 @@ export function Services() {
         'Comunidad privada Pro'
       ],
       forWho: "Líderes comprometidos con su crecimiento que quieren brillar tanto en casa como en el trabajo.",
-      price: "desde 5€ al mes",
+      price: "desde 4.92€ al mes",
       ctaText: "Únete a Pro",
       ctaDestination: "https://clubformidable.substack.com/subscribe",
       ctaVariant: "default" as const,
