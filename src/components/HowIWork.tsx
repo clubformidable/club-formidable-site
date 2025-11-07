@@ -48,128 +48,106 @@ export function HowIWork({ onNavigateToAbout }: HowIWorkProps) {
     <section className="py-24 px-6 md:px-24 bg-formidable-dark relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-formidable-olive/5 to-transparent pointer-events-none"></div>
       <div className="relative z-10">
-      <div className="max-w-7xl mx-auto">
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-formidable-gold mb-4 text-[36px] md:text-[56px]" style={{ lineHeight: '1.1' }}>
-            Cómo es trabajar conmigo
-          </h2>
-          <p className="text-formidable-gold opacity-70" style={{ fontSize: '18px' }}>
-            Esto no es para todos. Y está bien.
-          </p>
-        </motion.div>
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-formidable-gold mb-4 text-[36px] md:text-[56px]" style={{ lineHeight: '1.1' }}>
+              Cómo es trabajar conmigo
+            </h2>
+            <p className="text-formidable-gold opacity-70" style={{ fontSize: '18px' }}>
+              Esto no es para todos. Y está bien.
+            </p>
+          </motion.div>
 
-        {/* Two column layout: Text blocks + Image */}
-        <div className="grid md:grid-cols-2 gap-12 items-start mb-12">
-          {/* Text blocks column */}
-          <div className="space-y-6">
-            {blocks.map((block, index) => {
-              const Icon = block.icon;
-              const isExpanded = expandedIndex === index;
-              
-              return (
-                <motion.div 
-                  key={index} 
-                  className="group relative p-6 rounded-lg glassmorphism hover:border-formidable-gold/30 transition-all duration-500 overflow-hidden cursor-pointer hover:scale-105 hover:shadow-2xl hover:shadow-formidable-gold/20"
-                  onClick={() => toggleBlock(index)}
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                >
-                  <div className="flex gap-4 items-center justify-between">
-                    <div className="flex gap-4 items-center flex-1">
-                      <div className="flex-shrink-0">
-                        <div className="w-12 h-12 rounded-full bg-formidable-gold/10 flex items-center justify-center">
-                          <Icon className="w-6 h-6 text-formidable-gold" />
-                        </div>
-                      </div>
-                      <h3 className="text-formidable-gold" style={{ fontSize: '24px' }}>
-                        {block.title}
-                      </h3>
-                    </div>
-                    <ChevronDown 
-                      className={`w-6 h-6 text-formidable-gold flex-shrink-0 transition-transform duration-500 ${
-                        isExpanded ? 'rotate-180' : ''
-                      } md:opacity-50 md:group-hover:opacity-100`}
-                    />
-                  </div>
-                  <div 
-                    className={`transition-all duration-500 overflow-hidden ${
-                      isExpanded 
-                        ? 'max-h-96 opacity-100' 
-                        : 'max-h-0 opacity-0 md:group-hover:max-h-96 md:group-hover:opacity-100'
-                    }`}
+          {/* Two column layout: Text blocks + Image */}
+          <div className="grid md:grid-cols-2 gap-12 items-start mb-12">
+            {/* Text blocks column */}
+            <div className="space-y-6">
+              {blocks.map((block, index) => {
+                const Icon = block.icon;
+                const isExpanded = expandedIndex === index;
+
+                return (
+                  <motion.div
+                    key={index}
+                    className="group relative p-6 rounded-lg glassmorphism hover:border-formidable-gold/30 transition-all duration-500 overflow-hidden cursor-pointer hover:scale-105 hover:shadow-2xl hover:shadow-formidable-gold/20"
+                    onClick={() => toggleBlock(index)}
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
                   >
-                    <p className="text-formidable-gold opacity-85 mt-4 pl-16" style={{ fontSize: '16px', lineHeight: '1.7' }}>
-                      {block.copy}
+                    <div className="flex gap-4 items-center justify-between">
+                      <div className="flex gap-4 items-center flex-1">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 rounded-full bg-formidable-gold/10 flex items-center justify-center">
+                            <Icon className="w-6 h-6 text-formidable-gold" />
+                          </div>
+                        </div>
+                        <h3 className="text-formidable-gold" style={{ fontSize: '24px' }}>
+                          {block.title}
+                        </h3>
+                      </div>
+                      <ChevronDown
+                        className={`w-6 h-6 text-formidable-gold flex-shrink-0 transition-transform duration-500 ${isExpanded ? 'rotate-180' : ''
+                          } md:opacity-50 md:group-hover:opacity-100`}
+                      />
+                    </div>
+                    <div
+                      className={`transition-all duration-500 overflow-hidden ${isExpanded
+                          ? 'max-h-96 opacity-100'
+                          : 'max-h-0 opacity-0 md:group-hover:max-h-96 md:group-hover:opacity-100'
+                        }`}
+                    >
+                      <p className="text-formidable-gold opacity-85 mt-4 pl-16" style={{ fontSize: '16px', lineHeight: '1.7' }}>
+                        {block.copy}
+                      </p>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+
+            {/* Image column */}
+            <div className="sticky top-32">
+              <div className="relative cursor-pointer group" onClick={onNavigateToAbout}>
+                {/* Static image */}
+                <img
+                  src={coachImage}
+                  alt="Coach speaking"
+                  className="w-full rounded-lg shadow-2xl"
+                />
+
+                {/* Overlay ring */}
+                <div className="absolute inset-0 rounded-lg ring-1 ring-formidable-gold/20"></div>
+
+                {/* Centered button */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <motion.div
+                    className="border border-formidable-red bg-formidable-gold/95 backdrop-blur-sm px-8 py-4 rounded-lg shadow-lg text-center transition-transform duration-300 hover:scale-110"
+                    whileHover={{ scale: 1.1 }}
+                  >
+                    <p className="text-formidable-olive text-2xl font-medium">
+                      ¿Quién soy?
                     </p>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-
-          {/* Image column */}
-          <div className="sticky top-32">
-            <motion.div 
-              className="relative cursor-pointer group"
-              onClick={onNavigateToAbout}
-              initial={{ y: 0 }}
-              animate={{ 
-                y: [0, -10, 0],
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-              whileHover={{ scale: 1.02 }}
-            >
-              <img 
-                src={coachImage} 
-                alt="Coach speaking" 
-                className="w-full rounded-lg shadow-2xl"
-              />
-              <div className="absolute inset-0 rounded-lg ring-1 ring-formidable-gold/20"></div>
-              
-              {/* Destello con texto "¿Quién soy?" */}
-              <motion.div
-                className="absolute inset-0 flex items-center justify-center pointer-events-none"
-                initial={{ opacity: 0 }}
-                animate={{ 
-                  opacity: [0, 1, 1, 0],
-                }}
-                transition={{
-                  duration: 4,
-                  times: [0, 0.2, 0.7, 1],
-                  repeat: Infinity,
-                  repeatDelay: 8,
-                  ease: "easeInOut"
-                }}
-              >
-                <div className="bg-formidable-gold/95 backdrop-blur-sm px-8 py-4 rounded-lg shadow-2xl">
-                  <p className="text-formidable-olive" style={{ fontSize: '24px' }}>
-                    ¿Quién soy?
-                  </p>
+                  </motion.div>
                 </div>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
+          </div>
+
+          {/* Final statement - Full width */}
+          <div className="p-8 rounded-lg glassmorphism border-2 border-formidable-gold/30">
+            <p className="text-formidable-gold opacity-90 text-center max-w-4xl mx-auto" style={{ fontSize: '18px', lineHeight: '1.7' }}>
+              Porque sin un coach certificado, tu destino está marcado por lo que no ves. No necesitas más personas con consejos. Necesitas alguien entrenado para hacerte crecer.
+            </p>
           </div>
         </div>
-
-        {/* Final statement - Full width */}
-        <div className="p-8 rounded-lg glassmorphism border-2 border-formidable-gold/30">
-          <p className="text-formidable-gold opacity-90 text-center max-w-4xl mx-auto" style={{ fontSize: '18px', lineHeight: '1.7' }}>
-            Porque sin un coach certificado, tu destino está marcado por lo que no ves. No necesitas más personas con consejos. Necesitas alguien entrenado para hacerte crecer.
-          </p>
-        </div>
-      </div>
       </div>
     </section>
   );

@@ -13,14 +13,14 @@ export function Services() {
       badge: "Comienza aquí",
       badgeClass: "bg-formidable-olive text-formidable-gold",
       title: "Formidable Free",
-      description: "Tu primer paso hacia la claridad. Contenido semanal, herramientas y reflexiones que desafían tu forma de pensar.",
+      description: "Tu primer paso hacia el equilibrio. Contenido semanal, herramientas y reflexiones que desafían tu forma de pensar.",
       includes: [
         'Newsletter semanal con insights accionables',
-        'Acceso a archivo completo de contenidos',
+        'Contenido para padres, maridos y profesionales',
         'Frameworks y ejercicios de autoconocimiento',
-        'Comunidad de profesionales en crecimiento'
+        'Comunidad de padres en crecimiento'
       ],
-      forWho: "Profesionales que buscan perspectivas nuevas y están listos para cuestionarse a sí mismos.",
+      forWho: "Personas que buscan progresar en todos los aspectos de su vida.",
       price: "Gratis",
       ctaText: "Únete gratis",
       ctaVariant: "outline" as const,
@@ -36,12 +36,11 @@ export function Services() {
         'Todo lo de Free, más...',
         'Sesión mensual de coaching',
         '17% descuento en procesos de coaching 1:1',
-        'Planes de acción personalizados',
-        'Seguimiento y accountability',
         'Acceso prioritario a recursos exclusivos',
+        'Talleres de comunicación, gestión emocional y liderazgo',
         'Comunidad privada Pro'
       ],
-      forWho: "Líderes y profesionales comprometidos con su crecimiento que necesitan alguien que vea lo que ellos no pueden ver.",
+      forWho: "Líderes comprometidos con su crecimiento que quieren brillar tanto en casa como en el trabajo.",
       price: "desde 5€ al mes",
       ctaText: "Únete a Pro",
       ctaDestination: "https://clubformidable.substack.com/subscribe",

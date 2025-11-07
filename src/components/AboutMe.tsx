@@ -1,11 +1,10 @@
 "use client";
 
 import { motion } from "motion/react";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Badge } from "./ui/badge";
 import { Award, Briefcase, Users, Lightbulb } from "lucide-react";
-const Mario = new URL("../assets/mario.jpg", import.meta.url).href;
 const familyMario = new URL("../assets/family.png", import.meta.url).href;
+const Mario = new URL("../assets/mario.jpg", import.meta.url).href;
 
 export function AboutMe() {
   return (
@@ -46,7 +45,7 @@ export function AboutMe() {
               transition={{ duration: 0.6 }}
               whileHover={{ scale: 1.02 }}
             >
-              <ImageWithFallback
+              <img
                 src={Mario}
                 alt="Mario Acevedo - Coach profesional"
                 className="w-full rounded-lg shadow-2xl transition-all duration-500"
@@ -382,7 +381,7 @@ export function AboutMe() {
               transition={{ duration: 0.6 }}
               whileHover={{ scale: 1.02 }}
             >
-              <ImageWithFallback
+              <img
                 src={familyMario} 
                 alt="Mario Acevedo - Pasión por el buceo"
                 className="w-full rounded-lg shadow-2xl transition-all duration-500"

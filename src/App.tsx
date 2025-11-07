@@ -22,7 +22,9 @@ export default function App() {
           <>
             <Hero />
             <Services />
-            <HowIWork onNavigateToAbout={() => setCurrentPage("about")} />
+            <HowIWork onNavigateToAbout={() => {
+              setCurrentPage("about");
+              window.scrollTo(0, 0); }} />
             <Testimonials />
             <FinalCTA />
             <Footer />

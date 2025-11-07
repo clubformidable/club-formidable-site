@@ -31,7 +31,7 @@ export function Hero() {
             style={{ fontSize: '18px', padding: '24px 32px' }}
             onClick={scrollToServices}
           >
-            Explorar servicios
+            ¿Quieres ser formidable?
           </Button>
         </div>
       </div>

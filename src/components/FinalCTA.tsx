@@ -29,7 +29,7 @@ export function FinalCTA() {
           asChild
         >
           <a href="https://cal.com/mario-acevedo-aguilar-biepq1/30min" target="_blank" rel="noopener noreferrer" className="whitespace-normal md:whitespace-nowrap">
-            Agenda tu primera conversación
+            Agenda una conversación
           </a>
         </Button>
         
