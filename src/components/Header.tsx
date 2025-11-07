@@ -1,3 +1,4 @@
+// @ts-ignore: figma asset imports have no type declarations in this project
 import logo from "figma:asset/8fd4cb936a9604fd3e15d482484a61621a1f3cdb.png";
 
 interface HeaderProps {
