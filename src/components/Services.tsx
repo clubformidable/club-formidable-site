@@ -89,21 +89,17 @@ export function Services() {
           ))}
         </div>
 
-        {/* Desktop: Expandable cards */}
+        {/* Desktop: Simplified hover — zoom hovered card and hide other cards' text (titles remain visible) */}
         <div className="hidden md:flex gap-4 items-stretch">
           {services.map((service, index) => {
             const isHovered = hoveredIndex === index;
             const isAnyHovered = hoveredIndex !== null;
-            const flexValue = isHovered ? 2.5 : isAnyHovered ? 0.75 : 1;
-            
+
             return (
               <div
                 key={index}
-                className="transition-all duration-500 ease-out"
-                style={{ 
-                  flex: flexValue,
-                  minWidth: isHovered ? '600px' : '250px'
-                }}
+                className={`transform transition-transform duration-300 ease-out ${isHovered ? 'scale-105 z-10' : 'scale-100'}`}
+                style={{ flex: 1 }}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
@@ -154,7 +150,7 @@ function ServiceCard({ service, isExpanded, isCompressed = false }: ServiceCardP
           {service.badge}
         </Badge>
         
-        <h3 className="text-formidable-dark mb-3" style={{ fontSize: isCompressed ? '22px' : '28px', transition: 'font-size 0.5s' }}>
+        <h3 className="text-formidable-dark mb-3" style={{ fontSize: '28px' }}>
           {service.title}
         </h3>
         
