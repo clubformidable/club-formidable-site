@@ -16,7 +16,7 @@ export function Testimonials() {
       title: "Líder de equipos internacionales"
     },
     {
-      mindiTitle: "De la ansiedad al ascenso",
+      mindiTitle: "Del miedo al ascenso",
       copy: "\"Juan Carlos estaba atrapado en un ciclo de ansiedad en el trabajo. Identificamos las fuentes reales—no las obvias. Hoy disfruta de su familia, acaba de ser ascendido, y duerme bien por primera vez en años.\"",
       name: "Juan Carlos",
       title: "Director de Operaciones"
