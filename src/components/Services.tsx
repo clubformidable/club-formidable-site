@@ -65,7 +65,7 @@ export function Services() {
       price: "Personalizado",
       ctaText: "Hablemos de tu equipo",
       ctaVariant: "outline" as const,
-      ctaDestination: "https://cal.com/mario-acevedo-aguilar-biepq1/30min",
+      ctaDestination: "https://cal.com/mario-acevedo-aguilar-biepq1/conversacion-formidable-1h",
       featured: false
     }
   ];
