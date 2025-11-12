@@ -32,6 +32,12 @@ export function Testimonials() {
       copy: "\"Alfonso sabía mucho de su producto, pero no sabía comunicarlo. Trabajamos su asertividad y técnicas de venta. Hoy cierra deals que antes perdía, no porque venda mejor—porque se comunica desde la confianza.\"",
       name: "Alfonso",
       title: "Founder & CEO"
+    },
+    {
+      miniTitle: "Límites claros y sanos",
+      copy: "\"Ana, en una nueva posición tenía problemas a la hora de desconectar. Sus jefes cada vez pedían más. Su vida personal se desmoronaba. Descubrió en si misma una capacidad de poner límites claros y con respeto, una vez encontró sus motivaciones.\"",
+      name: "Ana",
+      title: "VP of Marketing"
     }
   ];
 
@@ -42,10 +48,10 @@ export function Testimonials() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-formidable-gold mb-4 text-[36px] md:text-[56px]" style={{ lineHeight: '1.1' }}>
-            Transformaciones reales, personas reales
+            Transformaciones reales
           </h2>
           <p className="text-formidable-gold opacity-70" style={{ fontSize: '18px' }}>
-            Lo que cambia no es solo el resultado. Es la forma en que se ven a sí mismos.
+            Construyeron un puente entre lo que eran y lo que soñaban ser.
           </p>
         </div>
 
@@ -66,6 +72,14 @@ export function Testimonials() {
               </CardContent>
             </Card>
           ))}
+        </div>
+        <div className="text-center mb-16">
+          <p className="text-formidable-gold opacity-70" style={{ fontSize: '18px' }}>
+            ¿Con qué sueñas tú y no te has atrevido aún?
+          </p>
+           <p className="text-formidable-gold opacity-70" style={{ fontSize: '18px' }}>
+            ...
+          </p>
         </div>
       </div>
       </div>

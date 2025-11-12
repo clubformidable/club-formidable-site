@@ -1,7 +1,11 @@
 import { Linkedin } from "lucide-react";
 import { Badge } from "./ui/badge";
 
-export function Footer() {
+interface FooterProps {
+  onNavigate?: (page: "home" | "about" | "privacy", sectionId?: string) => void;
+}
+
+export function Footer({ onNavigate }: FooterProps) {
   return (
     <footer className="bg-formidable-dark py-12 px-6 md:px-24 border-t border-formidable-olive/30">
       <div className="max-w-7xl mx-auto">
@@ -13,24 +17,24 @@ export function Footer() {
           </div>
           
           <nav className="flex flex-wrap gap-6 justify-center">
-            <a 
-              href="#sobre-mi" 
+            <button
+              onClick={() => onNavigate ? onNavigate("about") : window.location.hash = "#sobre-mi"}
               className="text-formidable-gold opacity-70 hover:opacity-100 transition-all duration-300 hover:scale-105"
             >
               Sobre mí
-            </a>
-            <a 
-              href="#contacto" 
+            </button>
+            <button
+              onClick={() => onNavigate ? onNavigate("home", "contacto") : window.location.hash = "#contacto"}
               className="text-formidable-gold opacity-70 hover:opacity-100 transition-all duration-300 hover:scale-105"
             >
               Contacto
-            </a>
-            <a 
-              href="#privacidad" 
+            </button>
+            <button
+              onClick={() => onNavigate && onNavigate("privacy")}
               className="text-formidable-gold opacity-70 hover:opacity-100 transition-all duration-300 hover:scale-105"
             >
               Política de privacidad
-            </a>
+            </button>
           </nav>
           
           <div className="flex gap-4">

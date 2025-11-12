@@ -2,23 +2,14 @@
 import logo from "figma:asset/8fd4cb936a9604fd3e15d482484a61621a1f3cdb.png";
 
 interface HeaderProps {
-  currentPage: "home" | "about";
-  onNavigate: (page: "home" | "about") => void;
+  currentPage: "home" | "about" | "privacy";
+  onNavigate: (page: "home" | "about" | "privacy", sectionId?: string) => void;
 }
 
 export function Header({ currentPage, onNavigate }: HeaderProps) {
-  const handleNavigation = (page: "home" | "about", sectionId?: string) => {
-    onNavigate(page);
-    if (sectionId && page === "home") {
-      setTimeout(() => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 100);
-    } else {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
+  // delegate scrolling/navigation behavior to the parent (App)
+  const handleNavigation = (page: "home" | "about" | "privacy", sectionId?: string) => {
+    onNavigate(page, sectionId);
   };
 
   return (
