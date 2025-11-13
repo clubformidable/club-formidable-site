@@ -10,10 +10,26 @@ export function CookieBanner({ onNavigate }: CookieBannerProps) {
 
   const loadHotjar = () => {
     // Cargar Contentsquare
-    const script = document.createElement('script');
-    script.src = 'https://t.contentsquare.net/uxa/8327179cb4436.js';
-    script.async = true;
-    document.head.appendChild(script);
+    const csScript = document.createElement('script');
+    csScript.src = 'https://t.contentsquare.net/uxa/8327179cb4436.js';
+    csScript.async = true;
+    document.head.appendChild(csScript);
+
+    // Cargar Google Analytics
+    const gaScript = document.createElement('script');
+    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-P941R64YDM';
+    gaScript.async = true;
+    document.head.appendChild(gaScript);
+
+    // Configurar Google Analytics
+    const gaConfigScript = document.createElement('script');
+    gaConfigScript.innerHTML = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-P941R64YDM');
+    `;
+    document.head.appendChild(gaConfigScript);
   };
 
   const handleAccept = () => {
@@ -50,7 +66,7 @@ export function CookieBanner({ onNavigate }: CookieBannerProps) {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
           <div style={{ flex: 1, color: '#D4AF37' }}>
             <p style={{ fontSize: '15px', lineHeight: 1.6, margin: 0 }}>
-              Este sitio utiliza cookies analíticas de Contentsquare para mejorar tu experiencia. 
+              Este sitio utiliza cookies analíticas (Google Analytics y Contentsquare) para mejorar tu experiencia. 
               No recopilamos información personal identificable. 
               Puedes aceptar, rechazar o leer más sobre nuestra política de privacidad.
             </p>

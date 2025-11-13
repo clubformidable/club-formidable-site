@@ -40,7 +40,7 @@ export function Privacy() {
 
         <h3 className="text-2xl font-semibold mt-8 mb-4">3. Uso de cookies</h3>
         <p className="opacity-80 mb-4" style={{ lineHeight: 1.7 }}>
-          Este sitio utiliza cookies propias y de terceros con fines exclusivamente analíticos mediante Contentsquare, para comprender cómo interactúan los visitantes con la página y mejorar la experiencia de navegación.
+          Este sitio utiliza cookies propias y de terceros con fines exclusivamente analíticos mediante Google Analytics y Contentsquare, para comprender cómo interactúan los visitantes con la página y mejorar la experiencia de navegación.
         </p>
         <ul className="opacity-80 mb-8 list-disc list-inside space-y-2" style={{ lineHeight: 1.7 }}>
           <li>Las cookies no recopilan información personal identificable.</li>
@@ -55,7 +55,7 @@ export function Privacy() {
           Cualquier información facilitada por el usuario al agendar una llamada o suscribirse en plataformas externas (como Substack o Calendly) se gestiona bajo las políticas de privacidad de dichas plataformas, no siendo responsabilidad del Titular.
         </p>
         <p className="opacity-80 mb-8" style={{ lineHeight: 1.7 }}>
-          El Titular únicamente accede, en su caso, a información estadística agregada y anónima proporcionada por Contentsquare o por los servicios externos utilizados.
+          El Titular únicamente accede, en su caso, a información estadística agregada y anónima proporcionada por Google Analytics, Contentsquare o por los servicios externos utilizados.
         </p>
 
         <h3 className="text-2xl font-semibold mt-8 mb-4">5. Derechos de propiedad intelectual</h3>
